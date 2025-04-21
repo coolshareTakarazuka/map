@@ -1,137 +1,505 @@
 <!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <title></title>
-    <meta name="description" content="ページ概要" />
-    <meta name="author" content="製作者名" />
-    <meta name="keywords" content="キーワード1, キーワード2, ・・・" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/d0a601627a.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d0a601627a.js" crossorigin="anonymous"></script>
+    <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    
+    <title>マップ</title>
+</head>
+<body>
+    
     <h1>
-      <img
+    <img
         src="https://i.ibb.co/Wv8X3LVh/1.png"
         alt="IMG-5451"
         width="100px"
         height="100px"
-      />
-      クールシェア宝塚2025<br />
-      スタンプラリー
+        />
+        クールシェア宝塚2025<br />
+        スタンプラリーカード
     </h1>
-    <h2>クールシェアスポットとは・・・？</h2>
-    <h3>
-      <p class="pClass1">
-        ご近所の涼しいところへ出かけよう！<br />
-        涼しい場所で、みんなの笑顔もシェアしよう<br />
-        「涼みにきました。」 <br />
-        この一言から始まる居場所とつながり。<br />
-        宝塚のお店や企業、施設に涼みに行ってみませんか？
-      </p>
-      <p class="pClass2">
-        今年は、宝塚市内の、〇〇箇所にスタンプラリー設置！！<br />
-        たくさんスタンプを集めて特典をゲットしよう！！<br />
-      </p>
-      <p class="pClass3">スタンプラリー期間：2025/7/1(火)〜2025/9/30(火)</p>
-    </h3>
 
-    <h2>ルール</h2>
-    <h3>
-      <ol>
-        <li>年齢問わずどなたでも参加可能！</li>
-        <li>同じスポットは1日1回まで！</li>
-        <li>毎日通って集めるのはOK！</li>
-        <li>10スタンプごとに、特典に応募可能！！</li>
-        <li>さらに、10スタンプごとに限定画像をプレゼント！！</li>
-      </ol>
-      <ul>
-        <li>
-          <strong>外出の際は熱中症対策のため、<br />必ず飲み物を持って出かけましょう。</strong>
-        </li>
-        <li>
-          <strong>すずむためのスポットです。<br />ゆずりあう、騒いで迷惑をかけないなど、<br />ルールを守って利用しましょう。</srtong>
-        </li>
-      </ul>
-    </h3>
-    <h2>遊び方</h2>
-    <h4>
-      《STEP１》クールシェア宝塚の公式アカウントに友達追加！<br />
-      <a href="https://lin.ee/xEzIj5u"
-        ><img
-          src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
-          alt="友だち追加"
-          height="36"
-          border="0" /></a
-      ><br />
-      《STEP２》ユーザー登録をしよう<br />
-      《STEP３》クールシェアスポットを見つけよう！<br />
-      《STEP４》クールシェアスポットでQRコードを読み取ろう！<br />
-      《STEP５》スポットIDをフォームに貼り付けよう！<br />
-      《STEP６》スタンプゲット！！<br>
+    <script>
+        function getDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371; // 地球の半径 (km)
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLon = (lon2 - lon1) * Math.PI / 180;
+            const a =
+                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return R * c; // 距離 (km)
+        }
 
-      <h2>《個人情報の取り扱いについて》
-        <h5 class="information">本イベントでは、<br>LINE認証で取得したユーザーIDのみを使用します。<br>ユーザーIDは、イベントのログインのために利用され、<br>その他の情報<br>（表示名・プロフィール画像・ステータスメッセージ）<br>は一切使用しません。</h5>
-        <h5 class="information">アンケートにてご提供いただいたすべての個人情報は、<br>本イベント及び、景品当選時にのみ使用します。<br>第三者に提供されることはありません。</h5></h3>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-    </h4>
-    
- 
-      <nav>
-    <ul class="menu">
-      <li>
-        <a href="https://chikarauemori.github.io/test57/" target="_self"
-          ><i class="fa-solid fa-house"></i><br /><span class="iconname"
-            >ホーム</span
-          ></a
-        >
-      </li>
-      <li>
-        <a href="https://chikarauemori.github.io/test62/" target="_self"
-          ><i class="fa-solid fa-location-dot"></i><br /><span class="iconname"
-            >マップ</span
-          ></a
-        >
-      </li>
-      <li>
-        <a
-          href="
-        https://chikarauemori.github.io/test77/" target="_self"
-          ><i class="fa-regular fa-list-ol"></i><br /><span class="iconname"
-            >遊び方</span
-          ></a
-        >
-      </li>
-      <li>
-        <a href="https://liff.line.me/2007154146-Y5jGo0G3" target="_self"
-          ><i class="fa-solid fa-circle-user"></i><br /><span class="iconname"
-            >マイページ</span
-          ></a
-        >
-      </li>
-    </ul>
-  </nav>
- 
-      
+        let storeData = [];
+
+        fetch('https://docs.google.com/spreadsheets/d/1v_EByc8HVuZVL0SfeC-QOZyOFV7IVZqTdsKs37_r-74/gviz/tq?tqx=out:csv')
+            .then(response => response.text())  // CSVデータをテキスト形式で取得
+            .then(csvText => {
+                const parsedData = Papa.parse(csvText, { header: true });
+                storeData = parsedData.data.map(entry => ({
+                    name: entry.name,
+                    lat: parseFloat(entry.lat),
+                    lon: parseFloat(entry.lon),
+                    businessHour: entry.businessHour,
+                    message: entry.message,
+                    open: entry.open,
+                    area: entry.area,
+                    industry: entry.industry,
+                    access: entry.access,
+                    spot1: entry.spot1,
+                    spot2: entry.spot2,
+                    spot3: entry.spot3,
+                    spot4: entry.spot4
+
+                }));
+                console.log(storeData);  // storeDataの内容をコンソールに表示
+            })
+            .catch(error => console.error('Error fetching or parsing CSV data:', error));
+
+        function sortByDistance() {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const userLat = position.coords.latitude;
+                    const userLon = position.coords.longitude;
+
+                    const sortedStores = storeData
+                        .map(store => ({
+                            ...store,
+                            distance: getDistance(userLat, userLon, store.lat, store.lon)
+                        }))
+                        .sort((a, b) => a.distance - b.distance);
+
+                    const top10 = sortedStores.slice(0, 10);
+                    displayStores(top10);
+                },
+                (error) => {
+                    console.error("位置情報の取得に失敗しました:", error);
+                }
+            );
+        }
+
+        function filterByArea(){
+            const selectedArea = document.getElementById("area-filter").value;
+
+            const filterdStores = selectedArea
+            
+            ? storeData.filter(store => store.area === selectedArea)
+            : storeData;
+
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const userLat = position.coords.latitude;
+                    const userLon = position.coords.longitude;
+
+                    const sortedStores = filterdStores
+                        .map(store => ({
+                            ...store,
+                            distance: getDistance(userLat, userLon, store.lat, store.lon)
+                        }))
+                        .sort((a, b) => a.distance - b.distance);
+
+                    const top10 = sortedStores.slice(0, 10);
+                    displayStores(top10);
+                },
+                (error) => {
+                    console.error("位置情報の取得に失敗しました:", error);
+                }
+            );
+        }
+
+        function filterByIndustry(){
+            const selectedIndustry = document.getElementById("industry-filter").value;
+
+            const filterdStore = selectedIndustry
+            
+            ? storeData.filter(store => store.industry.trim() === selectedIndustry.trim())
+            : storeData;
+
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const userLat = position.coords.latitude;
+                    const userLon = position.coords.longitude;
+
+                    const sortedStore = filterdStore
+                        .map(store => ({
+                            ...store,
+                            distance: getDistance(userLat, userLon, store.lat, store.lon)
+                        }))
+                        .sort((a, b) => a.distance - b.distance);
+
+                    const top10 = sortedStore.slice(0, 10);
+                    displayStores(top10);
+                },
+                (error) => {
+                    console.error("位置情報の取得に失敗しました:", error);
+                }
+            );
+        }
+
+        function filterByOpen(){
+            const selectedOpen = document.getElementById("open-filter").value;
+
+            const filterdStoresOpen = selectedOpen
+            
+            ? storeData.filter(store => store.open.trim() === selectedOpen.trim())
+            : storeData;
+
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const userLat = position.coords.latitude;
+                    const userLon = position.coords.longitude;
+
+                    const sortedStoresOpen = filterdStoresOpen
+                        .map(store => ({
+                            ...store,
+                            distance: getDistance(userLat, userLon, store.lat, store.lon)
+                        }))
+                        .sort((a, b) => a.distance - b.distance);
+
+                    const top10 = sortedStoresOpen.slice(0, 10);
+                    displayStores(top10);
+                },
+                (error) => {
+                    console.error("位置情報の取得に失敗しました:", error);
+                }
+            );
+        }
+
+        function filterByStamp(){
+            const selectedStamp = document.getElementById("stamp-filter").value;
+
+            const filterdStoresStamp = selectedStamp
+            
+            ? storeData.filter(store => store.spot2.trim() === selectedStamp.trim())
+            : storeData;
+
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const userLat = position.coords.latitude;
+                    const userLon = position.coords.longitude;
+
+                    const sortedStoresStamp = filterdStoresStamp
+                        .map(store => ({
+                            ...store,
+                            distance: getDistance(userLat, userLon, store.lat, store.lon)
+                        }))
+                        .sort((a, b) => a.distance - b.distance);
+
+                    const top10 = sortedStoresStamp.slice(0, 10);
+                    displayStores(top10);
+                },
+                (error) => {
+                    console.error("位置情報の取得に失敗しました:", error);
+                }
+            );
+        }
+        
+        
+        function displayStores(stores) {
+    const list = document.getElementById("store-list");
+    list.innerHTML = "";
+    stores.forEach(store => {
+        const li = document.createElement("li");
+        let html =`${store.name}&nbsp;`;
+
+        if (store.spot1 === "○") {
+            html += `<i class="fa-solid fa-shop"></i>&nbsp`;
+        }
+
+        if (store.spot2 === "○") {
+            html += `<i class="fa-solid fa-stamp i-top"></i>&nbsp`;
+        }
+
+        if (store.spot3 === "○") {
+            html += `<i class="fa-solid fa-circle-info"></i>&nbsp`;
+        }
+
+        if (store.spot4 === "○") {
+            html += `<i class="fa-solid fa-gift"></i>`;
+        }
+
+        html += `<br><i class="fas fa-map-marker-alt store-icon"></i>${store.distance.toFixed(2)}km<br>${store.access}<br><br>
+                 ${store.open}<br>${store.businessHour}<br>${store.message}<br>
+                 <a target="_blank" class="store-link" href="https://www.google.com/maps/dir/?api=1&destination=${store.lat},${store.lon}">Googleマップへ</a><br>`;
+
+        li.innerHTML = html;
+        list.appendChild(li);
+    });
+}
+    </script>
+
+    <h2>スポットを並び替え</h2>
+         <h4><i class="fa-solid fa-shop"></i>: クールスポットを提供</h4>
+        <h4><i class="fa-solid fa-stamp i-top"></i>: スタンプ獲得可能スポット</h4>
+      <h4><i class="fa-solid fa-circle-info"></i>: 情報スポット(パンフレットなどを設置いたします)</h4>
+       <h4> <i class="fa-solid fa-gift"></i>: 景品にご協力いただいたスポットです</h4>
+        
+
+<div  class="tabs">
+    <input id="near" type="radio" name="tab_item" aria-label="近い順" />
+  <label class="tab_item" for="near">近い順</label>
+
+  <input id="stamp" type="radio" name="tab_item" aria-label="スタンプ" checked />
+  <label class="tab_item" for="stamp">スタンプ</label>
+
+    <input id="area" type="radio" name="tab_item" aria-label="地区" />
+  <label class="tab_item" for="area">地区</label>
+
+  <input id="industry" type="radio" name="tab_item" aria-label="業種" />
+  <label class="tab_item" for="industry">業種</label>
+  
+  <input id="open" type="radio" name="tab_item" aria-label="営業日" />
+  <label class="tab_item" for="open">営業日</label>
+
+    <div class="tab_content" id="near_content">
+        <div class="tab_content_description">
+            <p class="c-txtsp">  
+
+                <h2>◉近い順に並び替える：</h2>
+                <button onclick="sortByDistance()">ここをタップ！！</button><br>
+                <p>現在地から近い10個のスポットが表示されます！</p>
+
+            </p>
+        </div>
+    </div>
+
+    <div class="tab_content" id="stamp_content">
+      <div class="tab_content_description">
+          <p class="c-txtsp">  
+
+            <h2>スタンプ獲得スポットを表示：<br>
+            <select id="stamp-filter" onchange="filterByStamp()">
+                <option value=""></option>
+                <option value="○">スタンプ獲得可能スポット</option>
+                <option value="">全て表示</option>
+            </select>
+        </h2>
+
+          </p>
+      </div>
+    </div>
+
+    <div class="tab_content" id="area_content">
+        <div class="tab_content_description">
+            <p class="c-txtsp">
+       
+                <h2>◉地区ごとに並び替える：<br>
+                    <select id="area-filter" onchange="filterByArea()">
+                        <option value=""></option>
+                        <option value="光明">光明</option>
+                        <option value="高司">高司</option>
+                        <option value="仁川">仁川</option>
+                        <option value="末成">末成</option>
+                        <option value="良元">良元</option>
+                        <option value="宝塚第一">宝塚第一</option>
+                        <option value="末広">末広</option>
+                        <option value="逆瀬台">逆瀬台</option>
+                        <option value="西山">西山</option>
+                        <option value="すみれ台">すみれ台</option>
+                        <option value="売布">売布</option>
+                        <option value="宝塚">宝塚</option>
+                        <option value="安倉">安倉</option>
+                        <option value="安倉北">安倉北</option>
+                        <option value="小浜">小浜</option>
+                        <option value="美座">美座</option>
+                        <option value="丸橋">丸橋</option>
+                        <option value="長尾">長尾</option>
+                        <option value="長尾南">長尾南</option>
+                        <option value="山手台">山手台</option>
+                        <option value="中山台">中山台</option>
+                        <option value="長尾台">長尾台</option>
+                        <option value="西谷">西谷</option>
+                        <option value="">全て表示</option>
+                    </select></h2>
+        
+            </p>
+        </div>
+    </div>
+
+    <div class="tab_content" id="industry_content">
+        <div class="tab_content_description">
+            <p class="c-txtsp">
+       
+                <h2>◉業種ごとに並び替える：<br>
+                    <select id="industry-filter" onchange="filterByIndustry()">
+                        <option value=""></option>
+                        <option value="１ 理容店・美容店">理容店・美容店</option>
+                        <option value="２ 個人商店・保険代理店・ガソリンスタンド">個人商店・保険代理店・ガソリンスタンド</option>
+                        <option value="３ 飲食店・食品個人商店">飲食店・食品個人商店</option>
+                        <option value="４ 大型商業施設・スーパー・コンビニエンスストア">大型商業施設・スーパー・コンビニエンスストア</option>
+                        <option value="５ 銀行">銀行</option>
+                        <option value="６ 建築・建材・資材・リフォーム">建築・建材・資材・リフォーム</option>
+                        <option value="７ メーカー・工場・印刷">メーカー・工場・印刷</option>
+                        <option value="８ 教室・レクレーション">教室・レクレーション</option>
+                        <option value="９ 地域活動拠点">地域活動拠点</option>
+                        <option value="１０ 公共施設">公共施設</option>
+                        <option value="１１ 薬局・福祉サービス事業所・福祉施設">薬局・福祉サービス事業所・福祉施設</option>
+                        <option value="その他">その他</option>
+                        <option value="">全て表示</option>
+                    
+                    
+                    </select></h2>
+        
+            </p>
+        </div>
+    </div>
+
+    <div class="tab_content" id="open_content">
+        <div class="tab_content_description">
+            <p class="c-txtsp">
+       
+                <h2>◉営業日のスポットを表示：<br>
+                    <h4>※実際の営業日・営業時間とは異なる場合があります</h4>
+                    <select id="open-filter" onchange="filterByOpen()">
+                        <option value=""></option>
+                        <option value="🙆‍♂️ 本日ご利用できます！">営業日</option>
+                        <option value="">全て表示</option>
+                    </select>
+                </h2>
+        
+            </p>
+        </div>
+    </div>
+
+</div>
+
 <style>
-            @media screen and (max-width: 768px) {
-      * {
-      font-size:85% ; /* スマホではフォントサイズを小さくする */
-      }
+    .tabs {
+        margin-top: 5px;
+        padding-bottom: 5px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .tab_item{
+        width: calc(100% / 5);
+        height: 50px;
+        border-bottom: 3px solid  #66cc99;
+        background-color: #d9d9d9;
+        line-height: 50px;
+        font-size: 16px;
+        text-align: center;
+        color: #565656;
+        display: block;
+        float: left;
+        font-weight: bold;
+        transition: all 0.2s ease;
+    }
+
+    tab_item:hover {
+        opacity: 0.75;
+    }
+
+    input[name="tab_item"]{
+        display: none;
+    }
+
+    .tab_content {
+        display: none;
+        padding: 5px 20px 0;
+        clear: both;
+        overflow: hidden;
+    }
+
+    #near:checked ~ #near_content,
+    #stamp:checked ~ #stamp_content,
+    #area:checked ~ #area_content,
+  #industry:checked ~ #industry_content,
+  #open:checked ~ #open_content{
+    display: block;
+  }
+
+  .tabs input:checked + .tab_item {
+    background-color: 	#66cc99;
+    color: #fff;
+  }
+
+
+</style>
+
+
+    
+
+    
+    
+    <ul id="store-list" class="store-list">
+
+    </ul>
+
+    <h2>全体マップ</h2>
+    <iframe src="https://www.google.com/maps/d/embed?mid=1lAKW-p5WHlteCxdWoGo-LhpNrFhYkqM&ehbc=2E312F" width="640" height="480"></iframe><br>
+
+
+
+        
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+     
+
+
+
+
+
+
+    <nav>
+        <ul class="menu">
+          <li>
+            <a href="https://chikarauemori.github.io/test57/" target="_self"
+              ><i class="fa-solid fa-house"></i><br /><span class="iconname"
+                >ホーム</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="https://chikarauemori.github.io/test62/" target="_self"
+              ><i class="fa-solid fa-location-dot"></i><br /><span class="iconname"
+                >マップ</span
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              href="
+            https://chikarauemori.github.io/test77/" target="_self"
+              ><i class="fa-regular fa-list-ol"></i><br /><span class="iconname"
+                >遊び方</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="https://liff.line.me/2007154146-Y5jGo0G3" target="_self"
+              ><i class="fa-solid fa-circle-user"></i><br /><span class="iconname"
+                >マイページ</span
+              ></a
+            >
+          </li>
+        </ul>
+      </nav>
+     
+
+ 
+<style>
+      select{
+        font-size: 125%;
       }
       .menu {
         position: fixed;
@@ -175,6 +543,7 @@
           padding: 5px;
         }
       }
+
           h1 {
         font-family: sans-serif;
         display: flex;
@@ -188,43 +557,65 @@
         font-size: 85%;
       }
 
-      h2 {
-        font-family: sans-serif;
-        text-align: center;
-        border-style: double;
-      }
-
-      .pClass1 {
-        font-family: sans-serif;
-        text-align: center;
-        text-shadow: 2px 2px 5px rgb(70, 199, 250);
-        font-family: sans-serif;
-      }
-
-      .pClass2 {
-        font-family: sans-serif;
-        border-style: dotted;
-        text-align: center;
-      }
-
-      .pClass3 {
-        font-family: sans-serif;
-        text-align: center;
+      input {
+        font-size: 200%;
         background: skyblue;
+        display: inline-block;
       }
 
-      h4{
-        font-family: sans-serif;
+      button {
+        font-size: 200%;
+        display: inline-block;
       }
-
       .information{
-        font-family: sans-serif;
         border-style: dotted;
+        display: inline-block;
       }
+       
+       iframe {
+         width: 100%;
+       }
 
-      ol{
-        font-family: sans-serif;
-      }
-    </style>
+       .store-list {
+        padding: 0;
+       }
+
+        .store-list li {
+        background: #fff;
+        border-left: solid 6px #66cc99;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 12px 16px;
+        margin-bottom: 12px;
+        transition: all 0.3 ease; 
+        font-weight: bold;
+    }
+
+    .store-list li:hover{
+        background: 	#b3ecd1;
+        box-shadow: 0 8 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .store-icon {
+        color: tomato; 
+        margin-right: 6px;
+    }
+
+    .store-link {
+        display: inline-block;
+        margin-top: 6px;
+        color: #4285F4;
+        text-decoration: none;
+        font-size:1m;
+        font-weight: bold;
+    }
+
+    .store-link:hover {
+        text-decoration: underline;
+    }
+  
+      </style>
   </body>
+</html>
+</body>
 </html>
