@@ -40,7 +40,7 @@
 
         let storeData = [];
 
-        fetch('https://docs.google.com/spreadsheets/d/1THIVbK7K9c70QYcLgtt22C1vvf7nHaU-BYMo7yADOHw/gviz/tq?tqx=out:csv')
+        fetch('https://docs.google.com/spreadsheets/d/1v_EByc8HVuZVL0SfeC-QOZyOFV7IVZqTdsKs37_r-74/gviz/tq?tqx=out:csv')
             .then(response => response.text())  // CSVデータをテキスト形式で取得
             .then(csvText => {
                 const parsedData = Papa.parse(csvText, { header: true });
