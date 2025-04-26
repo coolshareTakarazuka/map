@@ -237,11 +237,12 @@
     </script>
 
     <h2>スポットを並び替え</h2>
+    <div　class="information">
          <h4><i class="fa-solid fa-shop"></i>: クールスポットを提供</h4>
         <h4><i class="fa-solid fa-stamp i-top"></i>: スタンプ獲得可能スポット</h4>
-      <h4><i class="fa-solid fa-circle-info"></i>: 情報スポット(パンフレットなどを設置いたします)</h4>
+      <h4><i class="fa-solid fa-circle-info"></i>: 情報スポット</h4>
        <h4> <i class="fa-solid fa-gift"></i>: 景品にご協力いただいたスポットです</h4>
-        
+    </div>
 
 <div  class="tabs">
     <input id="near" type="radio" name="tab_item" aria-label="近い順" />
@@ -275,13 +276,13 @@
       <div class="tab_content_description">
           <p class="c-txtsp">  
 
-            <h2>スタンプ獲得スポットを表示：<br>
-            <select id="stamp-filter" onchange="filterByStamp()">
+            <h2>スタンプ獲得スポットを表示：<br></h2>
+            <h3><select id="stamp-filter" onchange="filterByStamp()">
                 <option value=""></option>
                 <option value="○">スタンプ獲得可能スポット</option>
                 <option value="">全て表示</option>
             </select>
-        </h2>
+            </h3>
 
           </p>
       </div>
@@ -328,8 +329,8 @@
         <div class="tab_content_description">
             <p class="c-txtsp">
        
-                <h2>◉業種ごとに並び替える：<br>
-                    <select id="industry-filter" onchange="filterByIndustry()">
+                <h2>◉業種ごとに並び替える：<br></h2>
+                    <h3><select id="industry-filter" onchange="filterByIndustry()">
                         <option value=""></option>
                         <option value="１ 理容店・美容店">理容店・美容店</option>
                         <option value="２ 個人商店・保険代理店・ガソリンスタンド">個人商店・保険代理店・ガソリンスタンド</option>
@@ -346,7 +347,7 @@
                         <option value="">全て表示</option>
                     
                     
-                    </select></h2>
+                    </select></h3>
         
             </p>
         </div>
@@ -563,7 +564,7 @@
       }
 
       button {
-        font-size: 150%;
+        font-size: 200%;
         display: inline-block;
       }
       .information{
@@ -612,6 +613,11 @@
     .store-link:hover {
         text-decoration: underline;
     }
+
+    .information{
+        border-style: solid;
+    }
+    
   
       </style>
   </body>
