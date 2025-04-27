@@ -108,6 +108,10 @@
 
                     const top10 = sortedStores.slice(0, 60);
                     displayStores(top10);
+
+                    document.getElementById("stamp-filter").value = "";
+                    document.getElementById("open-filter").value = "";
+                    document.getElementById("industry-filter").value = "";
                 },
                 (error) => {
                     console.error("位置情報の取得に失敗しました:", error);
@@ -137,6 +141,10 @@
 
                     const top10 = sortedStore.slice(0, 60);
                     displayStores(top10);
+
+                    document.getElementById("stamp-filter").value = "";
+                    document.getElementById("area-filter").value = "";
+                    document.getElementById("open-filter").value = "";
                 },
                 (error) => {
                     console.error("位置情報の取得に失敗しました:", error);
@@ -166,6 +174,10 @@
 
                     const top10 = sortedStoresOpen.slice(0, 60);
                     displayStores(top10);
+
+                    document.getElementById("stamp-filter").value = "";
+                    document.getElementById("area-filter").value = "";
+                    document.getElementById("industry-filter").value = "";
                 },
                 (error) => {
                     console.error("位置情報の取得に失敗しました:", error);
@@ -195,6 +207,11 @@
 
                     const top10 = sortedStoresStamp.slice(0, 60);
                     displayStores(top10);
+
+                    
+                    document.getElementById("area-filter").value = "";
+                    document.getElementById("open-filter").value = "";
+                    document.getElementById("industry-filter").value = "";
                 },
                 (error) => {
                     console.error("位置情報の取得に失敗しました:", error);
