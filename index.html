@@ -333,8 +333,8 @@
                         }))
                         .sort((a, b) => a.distance - b.distance);
 
-                    const top10 = sortedStoresStamp.slice(0, 100);
-                    displayStores(top100);
+                    const top20 = sortedStoresStamp.slice(0, 20);
+                    displayStores(top20);
 
                     
                     document.getElementById("area-filter").value = "";
