@@ -334,7 +334,7 @@
                         .sort((a, b) => a.distance - b.distance);
 
                     const top10 = sortedStoresStamp.slice(0, 100);
-                    displayStores(top10);
+                    displayStores(top100);
 
                     
                     document.getElementById("area-filter").value = "";
@@ -428,7 +428,7 @@
             <h3><select id="stamp-filter" onchange="filterByStamp()">
                 <option value=""></option>
                 <option value="○">スタンプ獲得可能スポット</option>
-                <option value="">全て表示</option>
+                
             </select>
             </h3>
 
