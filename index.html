@@ -15,132 +15,102 @@
 <body>
 
     <header>
-          <div id="loading">
-        <div class="loading-content">
-            <img src="https://i.ibb.co/Wv8X3LVh/1.png">
-          <h2>スタンプラリーの準備中です！！</h2>
-          <h2>loading・・・</h2>
-          <div class="progress-wrapper">
-            <div class="progress-bar"></div>
-            <div class="progress-text"><span class="percent">0%</span></div>
-          </div>
-        </div>
-    </div>
-      <script>
-        window.addEventListener('load',function(){
-            const element = document.querySelector('#loading')
-            element.classList.add('loadEnd');
-        });
-    </script>
-    <style>
-        #loading{
-            transition: all 1s;
-            background-color: #ffffff;
-            position:fixed;
-            z-index: 999;
-            inset: 0;
-            display: grid;
-            place-items:center;            
-        }
-
-        #loading img{
-            width: 40%;
-            animation: slide 4s linear infinite;
-            position: relative;
-        }
-
-        .loading-content{
-            width: 100vw;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        @keyframes slide {
-            0% {
-                transform: translateX(-100%);
-            }
-            100%{
-                transform: translateX(200%);
-            }
-        }
-
-        #loading h2 {
-            animation:fadeIn 5s linear infinite;
-            position:relative;
-            
-        }
+        <div id="loading">
+      <div class="loading-content">
+          <img src="https://i.ibb.co/Wv8X3LVh/1.png">
+        <h2>スポットの情報を読み込み中です！！</h2>
+        <h2>loading・・・</h2>
         
-        @keyframes fadeIn{
-            0% {opacity: 0}
-            50% {opacity : 1}
-            100% {opacity: 0}
-
-        }
-
-
-        .loadEnd{
-          opacity: 0;
-          visibility: hidden;
-          }
+      </div>
+    </div>
     
+    <style>
+      #loading{
+          transition: all 1s;
+          background-color: #ffffff;
+          position:fixed;
+          z-index: 999;
+          inset: 0;
+          display: grid;
+          place-items:center;            
+      }
+    
+      #loading img{
+          width: 40%;
+          animation: slide 4s linear infinite;
+          position: relative;
+      }
+    
+      .loading-content{
+          width: 100vw;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+    
+      @keyframes slide {
+          0% {
+              transform: translateX(-100%);
+          }
+          100%{
+              transform: translateX(200%);
+          }
+      }
+    
+      #loading h2 {
+          animation:fadeIn 5s linear infinite;
+          position:relative;
+          
+      }
+      
+      @keyframes fadeIn{
+          0% {opacity: 0}
+          50% {opacity : 1}
+          100% {opacity: 0}
+    
+      }
+    
+    
+    .loadEnd{
+        opacity: 0;
+        visibility: hidden;
+        }
+    
+    
+    
+    
+    
+    </style>  
+    
+    <script>
+      document.addEventListener("DOMContentLoaded",() => {
+        const loading = document.getElementById("loading");
+        const csvDisplay = document.getElementById("store-list");
+        
+        const csvUrl = 'https://docs.google.com/spreadsheets/d/1THIVbK7K9c70QYcLgtt22C1vvf7nHaU-BYMo7yADOHw/gviz/tq?tqx=out:csv';
+          
+        fetch(csvUrl)
+            .then(response => {
+                if (!response.ok) throw new Error('ネットワークエラー');
+                return response.text();
+            })
+            .then(csvText => {
+                
 
-
-
-
-    </style>
-
+                const element = document.querySelector('#loading')
+                element.classList.add('loadEnd');
   
-
-<style>
-  .progress-wrapper {
-  width: 100vw; /* 画面いっぱい */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
-  padding: 0 20px; /* スマホで左右ギリギリ防止（必要に応じて） */
-  box-sizing: border-box;
-}
-
-.progress-bar {
-  background-color: skyblue;
-  height: 10px;
-  width: 100%; /* wrapperの幅に合わせてフルに伸びる */
-  animation: loadingBar 20s linear infinite;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-  .progress-text {
-    font-size: 24px;
-    color: blue;
-   
-    font-weight: bold;
-  }
-
-  @keyframes loadingBar {
-    0% { width: 0; }
-    100% { width: 100%; }
-  }
-</style>
-
-<script>
-  const percentSpan = document.querySelector('.percent');
-  let loopStart = Date.now();
-  const duration = 20000; // 10秒
-
-  function loopPercentage() {
-    const now = Date.now();
-    const elapsed = (now - loopStart) % duration;
-    const progress = elapsed / duration;
-    const percentage = Math.floor(progress * 100);
-    percentSpan.textContent = `${percentage}%`;
-    requestAnimationFrame(loopPercentage);
-  }
-
-  loopPercentage();
-</script>
+            })
+            .catch(error => {
+                loading.textContent = '読み込みに失敗しました'
+            });
+      });
+    
+        
+                
+         
+            
+    </script>
     
     <h1>
     <img
