@@ -175,7 +175,7 @@
                         }))
                         .sort((a, b) => a.distance - b.distance);
 
-                    const top10 = sortedStores.slice(0, 144);
+                    const top10 = sortedStores.slice(0, 200);
                     displayStores(top10);
                 },
                 (error) => {
@@ -204,7 +204,7 @@
                         }))
                         .sort((a, b) => a.distance - b.distance);
 
-                    const top10 = sortedStores.slice(0, 144);
+                    const top10 = sortedStores.slice(0, 200);
                     displayStores(top10);
 
                     document.getElementById("stamp-filter").value = "";
@@ -237,7 +237,7 @@
                         }))
                         .sort((a, b) => a.distance - b.distance);
 
-                    const top10 = sortedStore.slice(0, 144);
+                    const top10 = sortedStore.slice(0, 200);
                     displayStores(top10);
 
                     document.getElementById("stamp-filter").value = "";
@@ -270,7 +270,7 @@
                         }))
                         .sort((a, b) => a.distance - b.distance);
 
-                    const top10 = sortedStoresOpen.slice(0, 144);
+                    const top10 = sortedStoresOpen.slice(0, 200);
                     displayStores(top10);
 
                     document.getElementById("stamp-filter").value = "";
@@ -303,7 +303,7 @@
                         }))
                         .sort((a, b) => a.distance - b.distance);
 
-                    const top20 = sortedStoresStamp.slice(0, 20);
+                    const top20 = sortedStoresStamp.slice(0, 200);
                     displayStores(top20);
 
                     
