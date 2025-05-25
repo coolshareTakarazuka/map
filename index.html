@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <header>
+    <!--<header>
         <div id="loading">
       <div class="loading-content">
           <img src="https://i.ibb.co/Wv8X3LVh/1.png">
@@ -22,7 +22,7 @@
         <h2>loading・・・</h2>
         
       </div>
-    </div>
+    </div> -->
     
     <style>
       #loading{
@@ -137,6 +137,7 @@
         }
 
         let storeData = [];
+        
 
         fetch('https://docs.google.com/spreadsheets/d/1THIVbK7K9c70QYcLgtt22C1vvf7nHaU-BYMo7yADOHw/gviz/tq?tqx=out:csv')
             .then(response => response.text())  // CSVデータをテキスト形式で取得
@@ -360,6 +361,7 @@
         <h4><i class="fa-solid fa-stamp i-top"></i>: スタンプ獲得可能スポット</h4>
       <h4><i class="fa-solid fa-circle-info"></i>: 情報スポット</h4>
        <h4> <i class="fa-solid fa-gift"></i>: 景品にご協力いただいたスポットです</h4>
+       <h5>※<i class="fa-solid fa-stamp i-top"></i>のアイコンがないスポットは、スタンプ獲得できません</h5>
     </div><br><br>
 
 <div  class="tabs">
@@ -394,7 +396,7 @@
       <div class="tab_content_description">
           <p class="c-txtsp">  
 
-            <h2>スタンプ獲得スポットを表示：<br></h2>
+            <h2><i class="fa-solid fa-stamp i-top"></i>スタンプ獲得可能スポットを表示：<br></h2>
             <h3><select id="stamp-filter" onchange="filterByStamp()">
                 <option value=""></option>
                 <option value="○">スタンプ獲得可能スポット</option>
@@ -422,7 +424,7 @@
                         <option value="末広">末広</option>
                         <option value="逆瀬台">逆瀬台</option>
                         <option value="西山">西山</option>
-                        <option value="すみれ台">すみれ台</option>
+                        <option value="すみれ">すみれ</option>
                         <option value="売布">売布</option>
                         <option value="宝塚">宝塚</option>
                         <option value="安倉">安倉</option>
@@ -561,14 +563,28 @@
         <i class="fa-solid fa-stamp i-top"></i>のスポットのみです</h4>
 
         <h3 class="qr">スポットでQRコードを読み取ろう！！</h3>
-        <button onclick="window.open('https://liff.line.me/2007302862-3mj9r7W5', '_blank')">QRコードを<br>読み取ろう！！</button>
+        <button onclick="window.open('https://liff.line.me/2007302862-3mj9r7W5', '_blank')">QRコードを読み取ろう！！<br>ここをタップ</button>
     
     <h2>全体マップ</h2>
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1BFtu8oXDAPdkLSRgE5ACh_wgGDPjhhM&ehbc=2E312F" width="640" height="480"></iframe>
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1BFtu8oXDAPdkLSRgE5ACh_wgGDPjhhM&ehbc=2E312F&ll=34.81007,135.341362&z=14" width="640" height="480"></iframe>
 
+    <h2><i class="fa-solid fa-map-marker-alt yellow"></i>：スタンプ獲得可能スポット</h2>
+    <h2><i class="fa-solid fa-map-marker-alt blue"></i>：その他のスポット</h2>
+   
+        <style>
+            i.yellow{
+                color: #f8d508;
+            }
+            i.blue{                    
+                color: #1e88e5;
+            }
 
-
-        
+            button {
+        display: block;
+        margin: auto;
+        font-size: 150%
+      }
+        </style>
 
     <br>
     <br>
@@ -689,10 +705,7 @@
         display: inline-block;
       }
 
-      button {
-        font-size: 200%;
-        display: inline-block;
-      }
+      
       .information{
         border-style: dotted;
         display: inline-block;
@@ -757,6 +770,6 @@
   
       </style>
   </body>
-</html>
+
 </body>
 </html>
