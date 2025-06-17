@@ -326,21 +326,23 @@
         const li = document.createElement("li");
         let html =`${store.name}&nbsp;`;
 
+        if (store.spot2 === "○") {
+            html += `<i class="fa-solid fa-stamp i-top"></i>&nbsp`;
+        }
+        
         if (store.spot1 === "○") {
             html += `<i class="fa-solid fa-shop"></i>&nbsp`;
         }
 
-        if (store.spot2 === "○") {
-            html += `<i class="fa-solid fa-stamp i-top"></i>&nbsp`;
-        }
+        
 
         if (store.spot3 === "○") {
             html += `<i class="fa-solid fa-circle-info"></i>&nbsp`;
         }
 
-        if (store.spot4 === "○") {
-            html += `<i class="fa-solid fa-gift"></i>`;
-        }
+        //if (store.spot4 === "○") {
+            //html += `<i class="fa-solid fa-gift"></i>`;
+        //}
 
         html += `<br><i class="fas fa-map-marker-alt store-icon"></i>${store.distance.toFixed(2)}km<br>${store.access}<br><br>
                  ${store.open}<br>${store.businessHour}<br>${store.message}<br>
